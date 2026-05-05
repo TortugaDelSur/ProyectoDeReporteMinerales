@@ -28,22 +28,8 @@ Capa de Persistencia: Almacenamiento en PostgreSQL mediante conexiones parametri
 
 Capa de Presentación: Dashboard dinámico en Grafana conectado directamente al volumen de la base de datos.
 
-4. Estructura de Archivos
 
-.
-├── docker-compose.yml           # Orquestación de contenedores
-├── db/
-│   └── init.sql                 # Esquema de tablas y configuración inicial
-└── extrator/
-    ├── Dockerfile               # Configuración de imagen de Python
-    ├── main.py                  # Motor principal y bucle de ejecución
-    ├── db_manager.py            # Gestión de transacciones SQL
-    ├── extractor_commodities.py  # Lógica de web scraping
-    ├── notificador.py           # Cliente para alertas externas
-    ├── requirements.txt         # Dependencias del proyecto
-    └── .env.example             # Plantilla de variables de entorno
-
-5. Instrucciones de Instalación y Despliegue
+4. Instrucciones de Instalación y Despliegue
 Requisitos Previos
 Docker Engine instalado.
 
@@ -64,10 +50,10 @@ Levante la infraestructura completa:
 
 Bash
    docker-compose up -d --build
-6. Configuración de Alertas (Opcional)
+5. Configuración de Alertas (Opcional)
 El sistema incluye un módulo de notificaciones vía Telegram. Para activarlo, se debe modificar la variable TELEGRAM_ENABLED en el archivo .env a true y proporcionar el TELEGRAM_TOKEN y TELEGRAM_CHAT_ID correspondientes.
 
-7. Acceso al Dashboard
+6. Acceso al Dashboard
 Una vez que el sistema esté en ejecución, los tableros de visualización estarán disponibles en la siguiente dirección:
 
 URL: http://localhost:3000
