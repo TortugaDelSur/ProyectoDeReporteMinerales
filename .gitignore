@@ -1,0 +1,16 @@
+# Entornos virtuales
+venv/
+env/
+
+# Secretos y variables de entorno
+.env
+extractor/.env
+
+# Bases de datos locales (Docker volumes)
+postgres_data/
+grafana_data/
+
+# Logs y archivos temporales
+*.log
+__pycache__/
+.DS_Store
